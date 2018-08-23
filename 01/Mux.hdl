@@ -15,4 +15,10 @@ CHIP Mux {
 
     PARTS:
     // Put your code here:
+    And(a = a, b = b, out = andAB)
+    Not(in = sel, out = notSel)
+    And(a = a, b = notSel, out = andANotSel)
+    And(a = b, b = c, out = andBC)
+    Or(a = andAB, b = andANotSel, out = halfSum)
+    Or(a = halfSum, b = andBC, out = out)
 }
