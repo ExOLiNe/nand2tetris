@@ -19,4 +19,10 @@ CHIP Mux8Way16 {
 
     PARTS:
     // Put your code here:
+    //as0's1s2s3s4s5s6s7s8 + bs0s1's2s3s4s5s6s7s8 + ..
+    Not(in = sel[0], out = notSel[0])
+    Not(in = sel[1], out = notSel[1])
+    Not(in = sel[2], out = notSel[2])
+
+    
 }
