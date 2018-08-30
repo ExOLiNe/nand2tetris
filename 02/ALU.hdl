@@ -56,8 +56,6 @@ CHIP ALU {
    
    Mux16(a = xOry, b = xAndy, sel = f, out = fRes)
    
-   Not(in = fRes, out = notFRes)
-   Mux16(a = fRes, b = notFRes, sel = no)
-
-   
+   Not16(in = fRes, out = notFRes)
+   Mux16(a = fRes, b = notFRes, sel = no, out = out)
 }
